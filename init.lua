@@ -40,7 +40,6 @@ vim.schedule(function()
 end)
 
 
-
 local enable_providers = {
       "python3_provider",
       "node_provider",
