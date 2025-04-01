@@ -3,6 +3,7 @@ vim.g.mapleader = " "
 vim.g.python_host_prog = "/home/joepa/venvs/nvim/venv/bin/python"
 vim.g.python3_host_prog = "/home/joepa/venvs/nvim/venv/bin/python"
 vim.g.loaded_python3_provider = "/home/joepa/venvs/nvim/venv/bin/python"
+vim.g.gitblame_enabled = 0
 
 -- bootstrap lazy and all plugins
 local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
@@ -49,3 +50,5 @@ local enable_providers = {
       vim.g["loaded_" .. plugin] = nil
       vim.cmd("runtime " .. plugin)
     end
+
+vim.keymap.set({"n", "v", "i"}, "<Leader>gb", '<cmd>GitBlameToggle<cr>')

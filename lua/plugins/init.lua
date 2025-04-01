@@ -35,4 +35,13 @@ return {
     "jremmen/vim-ripgrep",
     lazy=false,
   },
+  {
+    "tpope/vim-fugitive",
+    lazy=false,
+  },
+  {
+    "f-person/git-blame.nvim",
+    lazy=false,
+    enabled = true,
+  }
 }
