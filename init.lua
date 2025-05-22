@@ -52,3 +52,16 @@ local enable_providers = {
     end
 
 vim.keymap.set({"n", "v", "i"}, "<Leader>gb", '<cmd>GitBlameToggle<cr>')
+
+vim.api.nvim_create_augroup("AutoFormat", {})
+vim.api.nvim_create_autocmd(
+    "BufWritePost",
+    {
+        pattern = "*.py",
+        group = "AutoFormat",
+        callback = function()
+            vim.cmd("silent !black --quiet %")
+            vim.cmd("edit")
+        end,
+    }
+)
