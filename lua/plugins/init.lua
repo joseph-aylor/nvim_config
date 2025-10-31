@@ -44,4 +44,7 @@ return {
     lazy=false,
     enabled = true,
   }
+  -- git signs - GET BETTER
+  -- snacks
+  -- neogit
 }
